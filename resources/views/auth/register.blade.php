@@ -10,7 +10,14 @@
         </div>
         <div>
             <x-input-label for="role" :value="__('Role')" />
-            <x-text-input id="role" class="block mt-1 w-full" type="text" name="role" :value="old('role')" required autofocus autocomplete="role" />
+            <x-text-input id="role" class="block mt-1" type="radio" name="role" :value="__('Guest')" required autofocus autocomplete="role" />
+            <x-input-label for="role" :value="__('Guest')" />
+            <br><br>
+            <x-text-input id="role" class="block mt-1 " type="radio" name="role" :value="__('User')" required autofocus autocomplete="role" />
+            <x-input-label for="role" :value="__('User')" />
+            <br><br>
+            <x-text-input id="role" class="block mt-1" type="radio" name="role" :value="__('Admin')" required autofocus autocomplete="role" />
+            <x-input-label for="role" :value="__('Admin')" />
             <x-input-error :messages="$errors->get('role')" class="mt-2" />
         </div>
 
